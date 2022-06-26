@@ -1,0 +1,1695 @@
+#VRML_OBJ R2021a utf8
+Robot {
+  translation -2.8944091248340236 0.02961963694100702 3.5809399570988107
+  rotation -0.5240242563246753 0.8517026120695567 0.0011132732211840226 0.005021972357887445
+  children [
+    DEF base_solid Solid {
+      translation 0 -0.01 0
+      children [
+        DEF base Shape {
+          appearance PBRAppearance {
+            baseColor 0 1 0
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.003
+            radius 0.075
+          }
+        }
+        DEF caster_cover Solid {
+          translation 0 -0.0065 0.07
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 1 0
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.01
+                radius 0.012
+              }
+            }
+          ]
+        }
+        DEF caster_cover Solid {
+          translation 0 -0.0065 -0.07
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 1 0
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.01
+                radius 0.012
+              }
+            }
+          ]
+          name "solid(1)"
+        }
+        DEF spacer Solid {
+          translation 0.045 0.015 0.045
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 1 0
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.03
+                radius 0.002
+              }
+            }
+          ]
+          name "solid(2)"
+        }
+        DEF spacer Solid {
+          translation -0.045 0.015 0.045
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 1 0
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.03
+                radius 0.002
+              }
+            }
+          ]
+          name "solid(3)"
+        }
+        DEF spacer Solid {
+          translation -0.045 0.015 -0.045
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 1 0
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.03
+                radius 0.002
+              }
+            }
+          ]
+          name "solid(4)"
+        }
+        DEF spacer Solid {
+          translation 0.045 0.015 -0.045
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 1 0
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.03
+                radius 0.002
+              }
+            }
+          ]
+          name "solid(5)"
+        }
+        DEF front_indicator Solid {
+          translation 0 0.01 0.07
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 1
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.01 0.01 0.01
+              }
+            }
+          ]
+          name "solid(6)"
+        }
+        Solid {
+          translation 0 -0.015 0.097
+          children [
+            DEF white_box_solid Shape {
+              appearance PBRAppearance {
+                baseColor 0 1 0
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.2 0.003 0.005
+              }
+            }
+          ]
+          name "solid(7)"
+          boundingObject USE white_box_solid
+          physics Physics {
+          }
+        }
+        Solid {
+          translation 0.06 -0.01 0.045
+          children [
+            DEF white_box_solid Shape {
+              appearance PBRAppearance {
+                baseColor 0 1 0
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.004 0.018 0.004
+              }
+            }
+          ]
+          name "solid(8)"
+        }
+        Solid {
+          translation -0.06 -0.01 0.045
+          children [
+            DEF white_box_solid Shape {
+              appearance PBRAppearance {
+                baseColor 0 1 0
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.004 0.018 0.004
+              }
+            }
+          ]
+          name "solid(9)"
+        }
+        Solid {
+          translation 0.06 -0.015 0.065
+          children [
+            DEF white_box_solid Shape {
+              appearance PBRAppearance {
+                baseColor 0 1 0
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.004 0.004 0.06
+              }
+            }
+          ]
+          name "solid(10)"
+        }
+        Solid {
+          translation -0.06 -0.015 0.065
+          children [
+            DEF white_box_solid Shape {
+              appearance PBRAppearance {
+                baseColor 0 1 0
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.004 0.004 0.06
+              }
+            }
+          ]
+          name "solid(11)"
+        }
+      ]
+      boundingObject USE base
+      physics Physics {
+      }
+    }
+    DEF top_plate Solid {
+      translation 0 0.02 0
+      children [
+        USE base
+      ]
+      name "solid(6)"
+      boundingObject USE base
+      physics Physics {
+        density 10000
+      }
+    }
+    DEF left_motor HingeJoint {
+      jointParameters HingeJointParameters {
+        position 804.7690169821176
+        anchor 0.08 0 0
+      }
+      device [
+        PositionSensor {
+          name "L_encoder"
+        }
+        RotationalMotor {
+          name "L_wheel"
+        }
+      ]
+      endPoint Solid {
+        translation 0.08 0 0
+        rotation -0.16264059539383094 -0.16263874524970914 0.9731889206487815 4.685209480891736
+        children [
+          DEF wheel Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.006
+              radius 0.03
+            }
+          }
+          Shape {
+            appearance PBRAppearance {
+              baseColor 1 1 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.0065
+              radius 0.025
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE wheel
+        physics Physics {
+        }
+        linearVelocity 1.4220497080843699e-09 -1.4536728357085714e-11 -9.47723999326546e-10
+        angularVelocity -1.3669243761170808e-09 1.165185352733381e-08 -1.7205982785132354e-10
+      }
+    }
+    DEF right_motor HingeJoint {
+      jointParameters HingeJointParameters {
+        position 999.763768913371
+        anchor -0.08 0 0
+      }
+      device [
+        PositionSensor {
+          name "R_encoder"
+        }
+        RotationalMotor {
+          name "R_wheel"
+        }
+      ]
+      endPoint Solid {
+        translation -0.08 0 0
+        rotation 0.24487456449140144 0.24487327946422507 -0.9381223399267188 1.634634397566606
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 1 1 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.0065
+              radius 0.025
+            }
+          }
+          DEF wheel Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.006
+              radius 0.03
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE wheel
+        physics Physics {
+        }
+        linearVelocity 1.4300109455941916e-09 1.3368565581960313e-11 9.127482065147403e-10
+        angularVelocity -1.2554996490804903e-09 1.1651854012969769e-08 -1.725486282980204e-10
+      }
+    }
+    DEF front_caster BallJoint {
+      jointParameters BallJointParameters {
+        position -207.47195797468666
+        anchor 0 -0.02 0.07
+      }
+      jointParameters2 JointParameters {
+        position 55.22541345704571
+      }
+      jointParameters3 JointParameters {
+        position -86.43016677258814
+        axis 0 1 0
+      }
+      endPoint Solid {
+        translation -4.188287120676648e-06 -0.020000226239422107 0.0699985565333785
+        rotation -0.40391023844540763 0.377062560077957 0.8334748616883602 2.2847333137962798
+        children [
+          DEF caster Shape {
+            appearance PBRAppearance {
+              roughness 1
+              metalness 0
+            }
+            geometry Sphere {
+              radius 0.01
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject USE caster
+        physics Physics {
+        }
+        linearVelocity -2.026489457075564e-08 9.36537095048488e-11 6.618689346187785e-08
+        angularVelocity 6.787911842445934e-06 0.015784840142510716 1.5291951263591875e-06
+      }
+    }
+    DEF rear_caster BallJoint {
+      jointParameters BallJointParameters {
+        position -12.138794024259951
+        anchor 0 -0.02 -0.07
+      }
+      jointParameters2 JointParameters {
+        position 4.675713642810071
+      }
+      jointParameters3 JointParameters {
+        position -360.1449547418611
+        axis 0 1 0
+      }
+      endPoint Solid {
+        translation -2.0809669321053548e-07 -0.01999371667282006 -0.06999951916171732
+        rotation -0.8443589205767196 0.08600136496834031 0.5288305763343296 -1.6803905919580893
+        children [
+          DEF caster Shape {
+            appearance PBRAppearance {
+              roughness 1
+              metalness 0
+            }
+            geometry Sphere {
+              radius 0.01
+            }
+          }
+        ]
+        name "solid(4)"
+        boundingObject USE caster
+        physics Physics {
+        }
+        linearVelocity 6.097971619298446e-10 -9.133874526831176e-11 6.102043451955813e-12
+        angularVelocity -1.5987805821767685e-07 -9.978728925907666e-12 -1.3208660786418138e-07
+      }
+    }
+    DEF stage_motor HingeJoint {
+      jointParameters HingeJointParameters {
+        position -1.5931862557240836e-14
+        axis 0 1 0
+        anchor 0 0.026 0
+      }
+      device [
+        RotationalMotor {
+          name "stage_motor"
+        }
+      ]
+      endPoint Solid {
+        translation 3.5728793257034674e-09 0.025986095827023804 -3.176576313102373e-08
+        rotation 0.9958554322222242 0.04790420843256056 -0.07731199730919339 2.6153129851150967e-06
+        children [
+          DEF stage Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 1
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.05
+            }
+          }
+          DEF stage_top Solid {
+            translation 0 0.1 0
+            children [
+              USE stage
+            ]
+          }
+          Solid {
+            translation 0.025 0.05 0.025
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 1 0 1
+                  roughness 1
+                  metalness 0
+                }
+                geometry Cylinder {
+                  height 0.1
+                  radius 0.003
+                }
+              }
+            ]
+            name "solid(1)"
+          }
+          Solid {
+            translation -0.025 0.05 0.025
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 1 0 1
+                  roughness 1
+                  metalness 0
+                }
+                geometry Cylinder {
+                  height 0.1
+                  radius 0.003
+                }
+              }
+            ]
+            name "solid(2)"
+          }
+          Solid {
+            translation -0.025 0.05 -0.025
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 1 0 1
+                  roughness 1
+                  metalness 0
+                }
+                geometry Cylinder {
+                  height 0.1
+                  radius 0.003
+                }
+              }
+            ]
+            name "solid(3)"
+          }
+          Solid {
+            translation 0.025 0.05 -0.025
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 1 0 1
+                  roughness 1
+                  metalness 0
+                }
+                geometry Cylinder {
+                  height 0.1
+                  radius 0.003
+                }
+              }
+            ]
+            name "solid(4)"
+          }
+          Solid {
+            translation 0 0.05 0
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  roughness 1
+                  metalness 0
+                }
+                geometry Cylinder {
+                  height 0.1
+                  radius 0.003
+                }
+              }
+            ]
+            name "solid(5)"
+          }
+          SliderJoint {
+            jointParameters JointParameters {
+              position 0.09993410828154536
+              axis 0 1 0
+            }
+            device [
+              LinearMotor {
+                name "linear_motor"
+                controlPID 1 0 0
+                minPosition -1.1161613342158348e-05
+                maxPosition 0.1
+              }
+            ]
+            endPoint Solid {
+              translation 0 0.11093410828154536 0
+              children [
+                DEF linear_stage Shape {
+                  appearance PBRAppearance {
+                    baseColor 1 1 0
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Cylinder {
+                    height 0.01
+                    radius 0.05
+                  }
+                }
+                DEF link Solid {
+                  children [
+                    Shape {
+                      appearance PBRAppearance {
+                        baseColor 1 1 0
+                        roughness 1
+                        metalness 0
+                      }
+                      geometry Box {
+                        size 0.02 0.01 0.3
+                      }
+                    }
+                  ]
+                }
+                DEF gripper_holder_front Solid {
+                  translation 0 0 0.14
+                  children [
+                    DEF holder Shape {
+                      appearance PBRAppearance {
+                        baseColor 0 1 0
+                        roughness 1
+                        metalness 0
+                      }
+                      geometry Box {
+                        size 0.2 0.01 0.1
+                      }
+                    }
+                    Solid {
+                      translation 0 -0.02 -0.052
+                      children [
+                        DEF sensor_panel Shape {
+                          appearance PBRAppearance {
+                            baseColor 0 0 1
+                            roughness 1
+                            metalness 0
+                          }
+                          geometry Box {
+                            size 0.2 0.07 0.001
+                          }
+                        }
+                        DistanceSensor {
+                          translation 0.075 -0.034 0.001
+                          rotation 0 1 0 -1.5708
+                          children [
+                            Shape {
+                              appearance PBRAppearance {
+                                baseColor 0 0 0
+                                roughness 1
+                                metalness 0
+                              }
+                              geometry Box {
+                                size 0.002 0.004 0.003
+                              }
+                            }
+                          ]
+                          name "O_1"
+                          lookupTable [
+                            0 0 0
+                            0.6 1000 0
+                          ]
+                        }
+                        DistanceSensor {
+                          translation 0.045 -0.034 0.001
+                          rotation 0 1 0 -1.5708
+                          children [
+                            Shape {
+                              appearance PBRAppearance {
+                                baseColor 0 0 0
+                                roughness 1
+                                metalness 0
+                              }
+                              geometry Box {
+                                size 0.002 0.004 0.003
+                              }
+                            }
+                          ]
+                          name "O_2"
+                          lookupTable [
+                            0 0 0
+                            0.6 1000 0
+                          ]
+                        }
+                        DistanceSensor {
+                          translation 0.015 -0.034 0.001
+                          rotation 0 1 0 -1.5708
+                          children [
+                            Shape {
+                              appearance PBRAppearance {
+                                baseColor 0 0 0
+                                roughness 1
+                                metalness 0
+                              }
+                              geometry Box {
+                                size 0.002 0.004 0.003
+                              }
+                            }
+                          ]
+                          name "O_3"
+                          lookupTable [
+                            0 0 0
+                            0.6 1000 0
+                          ]
+                        }
+                        DistanceSensor {
+                          translation -0.015 -0.034 0.001
+                          rotation 0 1 0 -1.5708
+                          children [
+                            Shape {
+                              appearance PBRAppearance {
+                                baseColor 0 0 0
+                                roughness 1
+                                metalness 0
+                              }
+                              geometry Box {
+                                size 0.002 0.004 0.003
+                              }
+                            }
+                          ]
+                          name "O_4"
+                          lookupTable [
+                            0 0 0
+                            0.6 1000 0
+                          ]
+                        }
+                        DistanceSensor {
+                          translation -0.045 -0.034 0.001
+                          rotation 0 1 0 -1.5708
+                          children [
+                            Shape {
+                              appearance PBRAppearance {
+                                baseColor 0 0 0
+                                roughness 1
+                                metalness 0
+                              }
+                              geometry Box {
+                                size 0.002 0.004 0.003
+                              }
+                            }
+                          ]
+                          name "O_5"
+                          lookupTable [
+                            0 0 0
+                            0.6 1000 0
+                          ]
+                        }
+                        DistanceSensor {
+                          translation -0.075 -0.034 0.001
+                          rotation 0 1 0 -1.5708
+                          children [
+                            Shape {
+                              appearance PBRAppearance {
+                                baseColor 0 0 0
+                                roughness 1
+                                metalness 0
+                              }
+                              geometry Box {
+                                size 0.002 0.004 0.003
+                              }
+                            }
+                          ]
+                          name "O_6"
+                          lookupTable [
+                            0 0 0
+                            0.6 1000 0
+                          ]
+                        }
+                      ]
+                      name "solid(4)"
+                      boundingObject USE sensor_panel
+                      physics Physics {
+                      }
+                    }
+                    DEF front_flap_joint SliderJoint {
+                      jointParameters JointParameters {
+                        position 1.0420796145385923e-09
+                        axis 0 0 -1
+                      }
+                      device [
+                        LinearMotor {
+                          name "front_flap"
+                          minPosition -1.2417105025672188e-10
+                          maxPosition 0.04
+                        }
+                      ]
+                      endPoint Solid {
+                        translation 0.005 -0.008 0.04499999895792038
+                        rotation 0.7071067811862364 0.7071067811862364 9.381857096790023e-07 3.14159
+                        children [
+                          DEF falp_joint Shape {
+                            appearance PBRAppearance {
+                              baseColor 1 1 0
+                              roughness 1
+                              metalness 0
+                            }
+                            geometry Cylinder {
+                              height 0.01
+                              radius 0.0025
+                            }
+                          }
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                              position 8.846844413935788e-09
+                              axis 0 1 0
+                              anchor 0 -0.01 0
+                            }
+                            device [
+                              RotationalMotor {
+                                name "front_servo"
+                              }
+                            ]
+                            endPoint Solid {
+                              translation 0 -0.01 0
+                              children [
+                                DEF servo_axle Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 1 0 0
+                                    roughness 1
+                                    metalness 0
+                                  }
+                                  geometry Cylinder {
+                                    height 0.01
+                                    radius 0.0025
+                                  }
+                                }
+                                Solid {
+                                  translation 0 0.005 -0.0225
+                                  children [
+                                    DEF flap Shape {
+                                      appearance PBRAppearance {
+                                        baseColor 1 1 0
+                                        roughness 1
+                                        metalness 0
+                                      }
+                                      geometry Box {
+                                        size 0.005 0.2 0.04
+                                      }
+                                    }
+                                  ]
+                                  boundingObject USE flap
+                                  physics Physics {
+                                  }
+                                }
+                              ]
+                              boundingObject USE servo_axle
+                              physics Physics {
+                              }
+                              linearVelocity 3.863762322479454e-09 2.844544527505623e-10 -2.0337212106276956e-10
+                              angularVelocity -9.649858787338382e-10 1.1651863809172775e-08 -1.9146297029836526e-10
+                            }
+                          }
+                        ]
+                        boundingObject USE falp_joint
+                        physics Physics {
+                        }
+                        linearVelocity 3.6026225114380443e-09 2.6200299805707584e-10 -2.607366072014064e-10
+                        angularVelocity -1.9884161754369814e-09 1.147328151653977e-08 -1.9774284906232066e-10
+                      }
+                    }
+                    DEF rear_flap_joint SliderJoint {
+                      jointParameters JointParameters {
+                        position -1.0419162349377378e-09
+                      }
+                      device [
+                        LinearMotor {
+                          name "rear_flap"
+                          maxPosition 0.04
+                        }
+                      ]
+                      endPoint Solid {
+                        translation 0 -0.008 -0.04500000104191623
+                        rotation 0.7071067811862364 0.7071067811862364 9.381857096790023e-07 3.14159
+                        children [
+                          DEF falp_joint Shape {
+                            appearance PBRAppearance {
+                              baseColor 1 1 0
+                              roughness 1
+                              metalness 0
+                            }
+                            geometry Cylinder {
+                              height 0.02
+                              radius 0.0025
+                            }
+                          }
+                          Solid {
+                            translation -0.0225 0 0
+                            rotation 0 1 0 -1.5707953071795862
+                            children [
+                              DEF rear_flap_front Shape {
+                                appearance PBRAppearance {
+                                  baseColor 1 1 0
+                                  roughness 1
+                                  metalness 0
+                                }
+                                geometry Box {
+                                  size 0.005 0.2 0.04
+                                }
+                              }
+                            ]
+                            boundingObject USE rear_flap_front
+                            physics Physics {
+                            }
+                          }
+                        ]
+                        name "solid(3)"
+                        boundingObject USE falp_joint
+                        physics Physics {
+                        }
+                        linearVelocity 2.550237823460944e-09 1.2369350369863863e-10 -1.6882624792380905e-10
+                        angularVelocity -1.3128618346354943e-09 1.165185019324424e-08 -1.7226808824464763e-10
+                      }
+                    }
+                    DEF left_flap_joint SliderJoint {
+                      jointParameters JointParameters {
+                        position -1.4437508336699462e-13
+                        axis -1 0 0
+                      }
+                      device [
+                        LinearMotor {
+                          name "left_flap"
+                          minPosition -3.1402866935098336e-14
+                          maxPosition 0.09
+                        }
+                      ]
+                      endPoint Solid {
+                        translation 0.09500000000011297 -0.008 -0.005
+                        rotation 0.5773509358554485 0.5773509358554485 -0.5773489358556708 -2.094395307179586
+                        children [
+                          DEF falp_joint Shape {
+                            appearance PBRAppearance {
+                              baseColor 1 1 0
+                              roughness 1
+                              metalness 0
+                            }
+                            geometry Cylinder {
+                              height 0.01
+                              radius 0.0025
+                            }
+                          }
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                              position 5.68259774316469e-10
+                              axis 0 1 0
+                              anchor 0 -0.01 0
+                            }
+                            device [
+                              RotationalMotor {
+                                name "left_servo"
+                              }
+                            ]
+                            endPoint Solid {
+                              translation 0 -0.01 0
+                              children [
+                                DEF servo_axle Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 1 0 0
+                                    roughness 1
+                                    metalness 0
+                                  }
+                                  geometry Cylinder {
+                                    height 0.01
+                                    radius 0.0025
+                                  }
+                                }
+                                Solid {
+                                  translation 0 0.005 -0.0225
+                                  children [
+                                    DEF flap Shape {
+                                      appearance PBRAppearance {
+                                        baseColor 1 1 0
+                                        roughness 1
+                                        metalness 0
+                                      }
+                                      geometry Box {
+                                        size 0.005 0.02 0.04
+                                      }
+                                    }
+                                  ]
+                                  boundingObject USE flap
+                                  physics Physics {
+                                  }
+                                }
+                              ]
+                              boundingObject USE servo_axle
+                              physics Physics {
+                              }
+                              linearVelocity 3.073643807461568e-09 2.2746966470493175e-10 -1.5570900183968526e-09
+                              angularVelocity -1.3115949306677193e-09 1.1660244271236978e-08 2.9775225559442918e-09
+                            }
+                          }
+                        ]
+                        name "solid(1)"
+                        boundingObject USE falp_joint
+                        physics Physics {
+                        }
+                        linearVelocity 3.0137241729400005e-09 1.5687789114548523e-10 -1.3067304691728944e-09
+                        angularVelocity -1.3092063331916345e-09 1.1647999187513542e-08 -1.5499531984306194e-10
+                      }
+                    }
+                    DEF right_flap_joint SliderJoint {
+                      jointParameters JointParameters {
+                        position 2.677038919338123e-14
+                        axis 1 0 0
+                      }
+                      device [
+                        LinearMotor {
+                          name "right_flap"
+                          minPosition -1.19054172184063e-13
+                          maxPosition 0.09
+                        }
+                      ]
+                      endPoint Solid {
+                        translation -0.09499999999985417 -0.008 0.005
+                        rotation 0.5773502691890484 0.5773492691885822 0.5773512691895146 2.09439
+                        children [
+                          DEF falp_joint Shape {
+                            appearance PBRAppearance {
+                              baseColor 1 1 0
+                              roughness 1
+                              metalness 0
+                            }
+                            geometry Cylinder {
+                              height 0.01
+                              radius 0.0025
+                            }
+                          }
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                              position 5.616356113765231e-10
+                              axis 0 1 0
+                              anchor 0 -0.01 0
+                            }
+                            device [
+                              RotationalMotor {
+                                name "right_servo"
+                              }
+                            ]
+                            endPoint Solid {
+                              translation 0 -0.01 0
+                              children [
+                                DEF servo_axle Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 1 0 0
+                                    roughness 1
+                                    metalness 0
+                                  }
+                                  geometry Cylinder {
+                                    height 0.01
+                                    radius 0.0025
+                                  }
+                                }
+                                Solid {
+                                  translation 0 0.005 -0.0225
+                                  children [
+                                    DEF flap Shape {
+                                      appearance PBRAppearance {
+                                        baseColor 1 1 0
+                                        roughness 1
+                                        metalness 0
+                                      }
+                                      geometry Box {
+                                        size 0.005 0.02 0.04
+                                      }
+                                    }
+                                  ]
+                                  boundingObject USE flap
+                                  physics Physics {
+                                  }
+                                }
+                              ]
+                              boundingObject USE servo_axle
+                              physics Physics {
+                              }
+                              linearVelocity 3.0804625038377006e-09 2.73844336489067e-10 1.1561775952522386e-09
+                              angularVelocity -1.3315546568564507e-09 1.164349432183631e-08 -3.3360606808985546e-09
+                            }
+                          }
+                        ]
+                        name "solid(2)"
+                        boundingObject USE falp_joint
+                        physics Physics {
+                        }
+                        linearVelocity 3.1403837921025703e-09 2.0887727438568273e-10 9.061771550728945e-10
+                        angularVelocity -1.288555260118011e-09 1.1646912920100766e-08 -1.1516908731648023e-10
+                      }
+                    }
+                    Camera {
+                      rotation 1 0 0 -1.5708
+                      children [
+                        Solid {
+                          translation 0 0 -0.003
+                          children [
+                            Shape {
+                              appearance PBRAppearance {
+                                baseColor 0 0 1
+                                roughness 1
+                                metalness 0
+                              }
+                              geometry Box {
+                                size 0.01 0.01 0.01
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                      name "box_camera"
+                    }
+                  ]
+                  name "solid(1)"
+                  boundingObject USE holder
+                  physics Physics {
+                  }
+                }
+                DEF gripper_holder_rear Solid {
+                  translation 0 0 -0.2
+                  rotation 0 1 0 -3.1415853071795863
+                  children [
+                    DEF holder_2 Shape {
+                      appearance PBRAppearance {
+                        baseColor 1 0 0
+                        roughness 1
+                        metalness 0
+                      }
+                      geometry Box {
+                        size 0.2 0.01 0.1
+                      }
+                    }
+                    DEF front_flap_joint SliderJoint {
+                      jointParameters JointParameters {
+                        position -1.0416495339572891e-09
+                        axis 0 0 -1
+                      }
+                      device [
+                        LinearMotor {
+                          name "front_flap_1"
+                          minPosition -1.2417105025672188e-10
+                          maxPosition 0.04
+                        }
+                      ]
+                      endPoint Solid {
+                        translation 0.005 -0.008 0.04500000104164953
+                        rotation 0.7071067811862364 0.7071067811862364 9.381857096790023e-07 3.14159
+                        children [
+                          DEF falp_joint Shape {
+                            appearance PBRAppearance {
+                              baseColor 1 1 0
+                              roughness 1
+                              metalness 0
+                            }
+                            geometry Cylinder {
+                              height 0.01
+                              radius 0.0025
+                            }
+                          }
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                              position 8.860160083012075e-09
+                              axis 0 1 0
+                              anchor 0 -0.01 0
+                            }
+                            device [
+                              RotationalMotor {
+                                name "front_servo_1"
+                              }
+                            ]
+                            endPoint Solid {
+                              translation 0 -0.01 0
+                              children [
+                                DEF servo_axle Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 1 0 0
+                                    roughness 1
+                                    metalness 0
+                                  }
+                                  geometry Cylinder {
+                                    height 0.01
+                                    radius 0.0025
+                                  }
+                                }
+                                Solid {
+                                  translation 0 0.005 -0.0225
+                                  children [
+                                    DEF flap Shape {
+                                      appearance PBRAppearance {
+                                        baseColor 1 1 0
+                                        roughness 1
+                                        metalness 0
+                                      }
+                                      geometry Box {
+                                        size 0.005 0.2 0.04
+                                      }
+                                    }
+                                  ]
+                                  boundingObject USE flap
+                                  physics Physics {
+                                  }
+                                }
+                              ]
+                              boundingObject USE servo_axle
+                              physics Physics {
+                              }
+                              linearVelocity -1.669142485293354e-09 -3.207144699735676e-10 -1.8170857602032415e-10
+                              angularVelocity -9.632215618491755e-10 1.1651863775819392e-08 -1.9129991809710937e-10
+                            }
+                          }
+                        ]
+                        boundingObject USE falp_joint
+                        physics Physics {
+                        }
+                        linearVelocity -1.4079935148294582e-09 -2.9859789479005165e-10 -1.2434682446851178e-10
+                        angularVelocity -1.35576709965905e-09 1.1609391964328725e-08 -1.317335605798141e-10
+                      }
+                    }
+                    DEF rear_flap_joint SliderJoint {
+                      jointParameters JointParameters {
+                        position 1.0419158807919887e-09
+                      }
+                      device [
+                        LinearMotor {
+                          name "rear_flap_1"
+                          maxPosition 0.1
+                        }
+                      ]
+                      endPoint Solid {
+                        translation 0 -0.008 -0.04499999895808412
+                        rotation 0.7071067811862364 0.7071067811862364 9.381857096790023e-07 3.14159
+                        children [
+                          DEF falp_joint Shape {
+                            appearance PBRAppearance {
+                              baseColor 1 1 0
+                              roughness 1
+                              metalness 0
+                            }
+                            geometry Cylinder {
+                              height 0.02
+                              radius 0.0025
+                            }
+                          }
+                          Solid {
+                            translation -0.0225 0 0
+                            rotation 0 1 0 -1.5707953071795862
+                            children [
+                              DEF rear_fap Shape {
+                                appearance PBRAppearance {
+                                  baseColor 1 1 0
+                                  roughness 1
+                                  metalness 0
+                                }
+                                geometry Box {
+                                  size 0.005 0.2 0.04
+                                }
+                              }
+                            ]
+                            boundingObject USE rear_fap
+                            physics Physics {
+                            }
+                          }
+                        ]
+                        name "solid(3)"
+                        boundingObject USE falp_joint
+                        physics Physics {
+                        }
+                        linearVelocity -3.62801817535749e-10 -2.043410040547924e-10 -1.5550600553083468e-10
+                        angularVelocity -1.3128391629110311e-09 1.165185027705157e-08 -1.7226994313822846e-10
+                      }
+                    }
+                    DEF left_flap_joint SliderJoint {
+                      jointParameters JointParameters {
+                        position -8.741982943518595e-14
+                        axis -1 0 0
+                      }
+                      device [
+                        LinearMotor {
+                          name "left_flap_1"
+                          minPosition -3.1402866935098336e-14
+                          maxPosition 0.1
+                        }
+                      ]
+                      endPoint Solid {
+                        translation 0.09500000000005601 -0.008 -0.005
+                        rotation 0.5773509358554485 0.5773509358554485 -0.5773489358556708 -2.094395307179586
+                        children [
+                          DEF falp_joint Shape {
+                            appearance PBRAppearance {
+                              baseColor 1 1 0
+                              roughness 1
+                              metalness 0
+                            }
+                            geometry Cylinder {
+                              height 0.01
+                              radius 0.0025
+                            }
+                          }
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                              position 5.671034235136426e-10
+                              axis 0 1 0
+                              anchor 0 -0.01 0
+                            }
+                            device [
+                              RotationalMotor {
+                                name "left_servo_1"
+                              }
+                            ]
+                            endPoint Solid {
+                              translation 0 -0.01 0
+                              children [
+                                DEF servo_axle Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 1 0 0
+                                    roughness 1
+                                    metalness 0
+                                  }
+                                  geometry Cylinder {
+                                    height 0.01
+                                    radius 0.0025
+                                  }
+                                }
+                                Solid {
+                                  translation 0 0.005 -0.0225
+                                  children [
+                                    DEF flap Shape {
+                                      appearance PBRAppearance {
+                                        baseColor 1 1 0
+                                        roughness 1
+                                        metalness 0
+                                      }
+                                      geometry Box {
+                                        size 0.005 0.02 0.04
+                                      }
+                                    }
+                                  ]
+                                  boundingObject USE flap
+                                  physics Physics {
+                                  }
+                                }
+                              ]
+                              boundingObject USE servo_axle
+                              physics Physics {
+                              }
+                              linearVelocity -8.806983088221754e-10 -1.7716037912923935e-10 1.1742950532895704e-09
+                              angularVelocity -1.3345047618759778e-09 1.1643458569516084e-08 -3.351703377743993e-09
+                            }
+                          }
+                        ]
+                        name "solid(1)"
+                        boundingObject USE falp_joint
+                        physics Physics {
+                        }
+                        linearVelocity -8.207765215351319e-10 -2.422322460831411e-10 9.242966384948741e-10
+                        angularVelocity -1.3141008870750243e-09 1.164477538453995e-08 -1.493732919525865e-10
+                      }
+                    }
+                    DEF right_flap_joint SliderJoint {
+                      jointParameters JointParameters {
+                        position 7.164872311503219e-14
+                        axis 1 0 0
+                      }
+                      device [
+                        LinearMotor {
+                          name "right_flap_1"
+                          minPosition -1.19054172184063e-13
+                          maxPosition 0.08
+                        }
+                      ]
+                      endPoint Solid {
+                        translation -0.09499999999980929 -0.008 0.005
+                        rotation 0.5773502691890484 0.5773492691885822 0.5773512691895146 2.09439
+                        children [
+                          DEF falp_joint Shape {
+                            appearance PBRAppearance {
+                              baseColor 1 1 0
+                              roughness 1
+                              metalness 0
+                            }
+                            geometry Cylinder {
+                              height 0.01
+                              radius 0.0025
+                            }
+                          }
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                              position 5.642772967969693e-10
+                              axis 0 1 0
+                              anchor 0 -0.01 0
+                            }
+                            device [
+                              RotationalMotor {
+                                name "right_servo_1"
+                              }
+                            ]
+                            endPoint Solid {
+                              translation 0 -0.01 0
+                              children [
+                                DEF servo_axle Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 1 0 0
+                                    roughness 1
+                                    metalness 0
+                                  }
+                                  geometry Cylinder {
+                                    height 0.01
+                                    radius 0.0025
+                                  }
+                                }
+                                Solid {
+                                  translation 0 0.005 -0.0225
+                                  children [
+                                    DEF flap Shape {
+                                      appearance PBRAppearance {
+                                        baseColor 1 1 0
+                                        roughness 1
+                                        metalness 0
+                                      }
+                                      geometry Box {
+                                        size 0.005 0.02 0.04
+                                      }
+                                    }
+                                  ]
+                                  boundingObject USE flap
+                                  physics Physics {
+                                  }
+                                }
+                              ]
+                              boundingObject USE servo_axle
+                              physics Physics {
+                              }
+                              linearVelocity -8.867451392654536e-10 -2.1566698743283584e-10 -1.5393543247194218e-09
+                              angularVelocity -1.2875284207523292e-09 1.165998180491529e-08 2.972516872885117e-09
+                            }
+                          }
+                        ]
+                        name "solid(2)"
+                        boundingObject USE falp_joint
+                        physics Physics {
+                        }
+                        linearVelocity -9.466613747344053e-10 -2.862160660941071e-10 -1.289002120211599e-09
+                        angularVelocity -1.2850842867295462e-09 1.1640108370551967e-08 -1.4918117692302593e-10
+                      }
+                    }
+                  ]
+                  name "solid(2)"
+                  boundingObject USE holder_2
+                  physics Physics {
+                  }
+                }
+              ]
+              name "solid(6)"
+              boundingObject USE linear_stage
+              physics Physics {
+              }
+              linearVelocity 1.1927512320939086e-09 -2.974978655387446e-11 -2.0159986571299795e-10
+              angularVelocity -1.3128835406266836e-09 1.1651850441933692e-08 -1.7226746637917912e-10
+            }
+          }
+        ]
+        name "solid(5)"
+        boundingObject USE stage
+        physics Physics {
+        }
+        linearVelocity 1.431857394525879e-09 -6.816395163729596e-13 -5.7870503448884884e-11
+        angularVelocity -1.313004508848509e-09 1.1651849756207294e-08 -1.7231120926975065e-10
+      }
+    }
+    DistanceSensor {
+      translation 0.007 -0.012 0.056
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.002 0.004 0.003
+          }
+        }
+      ]
+      name "F_S4"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.007 -0.012 0.056
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.002 0.004 0.003
+          }
+        }
+      ]
+      name "F_S5"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.021 -0.012 0.052
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.002 0.004 0.003
+          }
+        }
+      ]
+      name "F_S6"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.021 -0.012 0.052
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.002 0.004 0.003
+          }
+        }
+      ]
+      name "F_S3"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.035 -0.012 0.052
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.002 0.004 0.003
+          }
+        }
+      ]
+      name "F_S2"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.035 -0.012 0.052
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.002 0.004 0.003
+          }
+        }
+      ]
+      name "F_S7"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.049 -0.012 0.052
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.002 0.004 0.003
+          }
+        }
+      ]
+      name "F_S8"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.049 -0.012 0.052
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.002 0.004 0.003
+          }
+        }
+      ]
+      name "F_S1"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.06 -0.012 -0.015
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.002 0.004 0.003
+          }
+        }
+      ]
+      name "L_J"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.06 -0.012 -0.015
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.002 0.004 0.003
+          }
+        }
+      ]
+      name "R_J"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.035 -0.012 0.092
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.002 0.004 0.003
+          }
+        }
+      ]
+      name "L_WB"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.035 -0.012 0.092
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.002 0.004 0.003
+          }
+        }
+      ]
+      name "R_WB"
+      type "infra-red"
+    }
+    Camera {
+      translation 0.045 -0.012 0
+      rotation -1 0 0 1.5708
+      children [
+        Solid {
+          translation 0 0 -0.004
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 1
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.01 0.01 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "L_C"
+    }
+    Camera {
+      translation -0.045 -0.012 0
+      rotation -1 0 0 1.5708
+      children [
+        Solid {
+          translation 0 0 -0.004
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 1
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.01 0.01 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "R_C"
+    }
+    Camera {
+      translation 0 -0.012 0.04
+      rotation -1 0 0 1.5708
+      children [
+        Solid {
+          translation 0 0 -0.004
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 1
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.01 0.01 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "F_C"
+    }
+  ]
+  boundingObject USE base
+  physics Physics {
+  }
+  controller "achintha_6"
+  linearVelocity 1.4356979126788615e-09 -4.749012994939013e-14 -4.431589142938467e-11
+  angularVelocity -1.3128837347877704e-09 1.1651854460063418e-08 -1.7225979194355218e-10
+}
