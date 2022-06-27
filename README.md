@@ -1,6 +1,6 @@
 # Webot_Maze_Solve_Robot
 
-This is an autonomous robot designed by me for a local robotics competition, simulated using [Webots](https://cyberbotics.com) open source robot simulator. This repositiory contains completed project folder of the simulation.
+This is an autonomous robot designed for a local robotics competition, simulated using [Webots](https://cyberbotics.com) open source robot simulator. This repositiory contains completed project folder of the simulation.
 
 Robot controller is built on subsumption architecture, written in C++. For maze solving A-star algorithm is implemented. 
 
