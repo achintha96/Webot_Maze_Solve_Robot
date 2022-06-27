@@ -2,10 +2,11 @@
 
 This is an autonomous robot designed by me for a local robotics competition, simulated using [Webots](https://cyberbotics.com) open source robot simulator. This repositiory contains completed project folder of the simulation.
 
-Robot controller is built on subsumption architecture, written in C++. 
-Robot design is built using webot software.
-For maze solving A-star algorithm is implemented.
+Robot controller is built on subsumption architecture, written in C++. For maze solving A-star algorithm is implemented. 
 
+Robot design is built using webot software.
+
+# Watch the recorded simulation.  
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/obW6qpAt8MI/0.jpg)](https://www.youtube.com/watch?v=obW6qpAt8MI)
 
 <!--
