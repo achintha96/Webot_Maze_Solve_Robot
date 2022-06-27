@@ -8,5 +8,6 @@ For maze solving A-star algorithm is implemented.
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/obW6qpAt8MI/0.jpg)](https://www.youtube.com/watch?v=obW6qpAt8MI)
 
+<!--
 <iframe width="560" height="315" src="https://www.youtube.com/embed/obW6qpAt8MI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+-->
